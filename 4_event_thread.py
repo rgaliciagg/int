@@ -2,7 +2,7 @@
 import signal
 import sys
 import RPi.GPIO as GPIO
-BUTTON_GPIO = 23
+BUTTON_GPIO = 17
 def signal_handler(sig, frame):
     GPIO.cleanup()
     sys.exit(0)
@@ -16,3 +16,4 @@ if __name__ == '__main__':
     
     signal.signal(signal.SIGINT, signal_handler)
     signal.pause()
+# deep sleep
